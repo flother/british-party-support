@@ -43,6 +43,9 @@ read_elections_data <- function() {
 #' @example read_con_lab_vote_share()
 read_con_lab_vote_share <- function() {
   read_elections_data() %>%
+    # Remove Northern Ireland; Labour isn't a registered political party there,
+    # and the Conservatives have only recently fielded candidates.
+    filter(Area != 1) %>%
     mutate(election = fct_rev(fct_inorder(election)),
            Conservative = CON / Electorate,
            Labour = LAB / Electorate) %>%
