@@ -6,7 +6,7 @@ The data is from [Election Calculus]. The chart is created using Hadley Wickhamâ
 
 ![](tory-labour-1955-2019.png)
 
-  [The rise and fall in support for British political parties]: https://flother.is/2018/british-party-support/
+  [The rise and fall in support for British political parties]: https://www.flother.is/blog/british-party-support/
   [Election Calculus]: http://www.electoralcalculus.co.uk/flatfile.html
   [`ggplot2`]: https://ggplot2.tidyverse.org/
   [`ggridges`]: https://github.com/clauswilke/ggridges
