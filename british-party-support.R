@@ -1,5 +1,5 @@
 #' A script to download British parlimentary elections data from Electoral
-#' Calculus for elections between 1955 and 2017 inclusive, and plot Conservative
+#' Calculus for elections between 1955 and 2019 inclusive, and plot Conservative
 #' and Labour vote share as a ridgeline plot.
 library(tidyverse)  # v1.2.1
 library(ggridges)   # v0.5.0
@@ -33,7 +33,7 @@ read_election_data <- function(election) {
 read_elections_data <- function() {
   bind_rows(lapply(c("1955", "1959", "1964", "1966", "1970", "1974feb",
                      "1974oct", "1979", "1983", "1987", "1992ob", "1997",
-                     "2001ob", "2005ob", "2010", "2015", "2017"),
+                     "2001ob", "2005ob", "2010", "2015", "2017", "2019"),
                    read_election_data))
 }
 
@@ -76,7 +76,7 @@ ggplot(data = read_con_lab_vote_share(),
   theme(legend.position = "top")
 
 # Save the plot as a PNG in the working directory.
-ggsave('tory-labour-1955-2017.png',
+ggsave('tory-labour-1955-2019.png',
        width = unit(9, "cm"),
        height = unit(10, "cm"),
        dpi = "print")
